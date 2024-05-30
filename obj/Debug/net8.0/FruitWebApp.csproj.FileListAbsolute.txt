@@ -28,3 +28,4 @@
 /Users/aarongiron/Desktop/DotNet/FruitWebApp-codebehind/obj/Debug/net8.0/FruitWebApp.pdb
 /Users/aarongiron/Desktop/DotNet/FruitWebApp-codebehind/obj/Debug/net8.0/FruitWebApp.genruntimeconfig.cache
 /Users/aarongiron/Desktop/DotNet/FruitWebApp-codebehind/obj/Debug/net8.0/ref/FruitWebApp.dll
+/Users/aarongiron/Desktop/DotNet/FruitWebApp-codebehind/obj/Debug/net8.0/FruitWebApp.sourcelink.json

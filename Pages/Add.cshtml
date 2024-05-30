@@ -13,7 +13,7 @@
 	<input hidden asp-for="FruitModels.id" />
 	<div class="border p-3 mt-4" style="width:50%">
 		<div class="row pb-2">
-			<h2 class="text-primary pl-3">Add Fruit</h2>
+			<h2 class="text-primary pl-3">Agregar Fruta</h2>
 			<hr />
 		</div>
 		<div class="mb-3">
@@ -26,12 +26,17 @@
 			<label asp-for="FruitModels.instock" class="h5"></label><br/>
 			@* Render the true/false instock state from the record in an editable checkbox. *@
 			<input type="checkbox" asp-for="FruitModels.instock" style="width:20px; height:20px" />
-			<label class="h7"><i class="bi bi-arrow-left"></i>  Check the box if it's available.</label>
+			<label class="h7"><i class="bi bi-arrow-left"></i>  Marcar si la fruta esta disponible.</label>
 			<span asp-validation-for="FruitModels.instock" class="text-danger"></span>
 		</div>
+		<div class="mb-3">
+			<label asp-for="FruitModels.price" class="h5"></label>
+			<input type="text" asp-for="FruitModels.price"/>
+			<span asp-validation-for="FruitModels.price" class="text-danger"></span>
+		</div>
 		@* Submit the addition or return to the Index page if the Add is cancelled.*@
-		<button type="submit" class="btn btn-primary" style="width:150px;">Create</button>
-		<a asp-page="Index" class="btn btn-secondary" style="width:150px;">Cancel</a>
+		<button type="submit" class="btn btn-primary" style="width:150px;">Crear</button>
+		<a asp-page="Index" class="btn btn-secondary" style="width:150px;">Cancelar</a>
 	</div>
 </form>
 @* End render Add code block *@

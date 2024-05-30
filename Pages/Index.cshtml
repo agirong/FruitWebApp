@@ -10,8 +10,8 @@
 
     <div>
         <div class="col border-bottom" style="width:80%">
-            <h2 class="display-6">My Fruit List</h2>
-            <p>My favorite fruits and if I have them available.</p>
+            <h2 class="display-6">Mi Lista de Frutas</h2>
+            <p>Mi lista de frutas favoritas disponibles</p>
         </div>
     </div>
 
@@ -32,7 +32,7 @@
             </div>
             <div class="col text-end pb-4">
                 <a asp-page="add" class="btn btn-primary mx-2 text-end" title="">
-                    <i class="bi bi-plus-square"></i> &nbsp;Add to list
+                    <i class="bi bi-plus-square"></i> &nbsp;Agregar Fruta
                 </a>
             </div>
         </div>
@@ -42,9 +42,10 @@
     <table class="table table-bordered table-striped" style="width:80%">
         <thead>
             <tr>
-                <th>Fruit Name</th>
-                <th class="text-center">Available?</th>
-                <th class="text-center">Manage</th>
+                <th>Nombre</th>
+                <th>Precio</th>
+                <th class="text-center">Disponibilidad</th>
+                <th class="text-center">Acciones</th>
             </tr>
         </thead>
 
@@ -57,14 +58,15 @@
             {
                 <tr>
                     @* Display the name of the fruit. *@
-                    <td width="50%">@obj.name</td>
+                    <td width="25%">@obj.name</td>
+                    <td width="25%">@obj.price</td>
                     @*  The following if statment is a Razor code block that changes the color 
                         and icon of the available indicator in the page rendering. *@
                     @{
                         if (@obj.instock)
                         {
                             <td width="20%" class="text-md-center">
-                                <i class="bi bi-check-circle" style="font-size: 1rem; color: green;"></i>&nbsp;Yes
+                                <i class="bi bi-check-circle" style="font-size: 1rem; color: green;"></i>&nbsp;Si
                             </td>
                         }
                         else
@@ -78,12 +80,12 @@
                         @*  The following div contains information to handle the edit and delete functions. *@
                         <div class="w-75 btn-group btn-group-sm" role="group" style="text-align:center">
                             @* Routes to the Edit page and passes the id of the record. *@
-                            <a asp-page="Edit" asp-route-id="@obj.id" class="btn btn-primary  mx-2">
-                                <i class="bi bi-pencil-square"></i> Edit
+                            <a asp-page="Edit" asp-route-id="@obj.id" class="btn btn-primary  mx-3">
+                                <i class="bi bi-pencil-square"></i> Editar
                             </a>
                             @* Routes to the Delete page and passes the id of the record. *@
-                            <a asp-page="Delete" asp-route-id="@obj.id" class="btn btn-danger mx-2">
-                                <i class="bi bi-trash"></i> Delete
+                            <a asp-page="Delete" asp-route-id="@obj.id" class="btn btn-danger mx-3">
+                                <i class="bi bi-trash"></i> Eliminar
                             </a>
                         </div>
                     </td>
