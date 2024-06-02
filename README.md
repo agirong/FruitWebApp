@@ -1,2 +1,2 @@
 # FruitWebApp
-WebApp with .NET Core 8 consumes de FruitAPI also present in this respository
+WebApp with .NET Core 8 consumes FruitAPI also present in this GitHub Profile
